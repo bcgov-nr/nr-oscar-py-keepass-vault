@@ -42,8 +42,9 @@ sudo apt-get update && sudo apt-get install vault
 ```
 touch env-dev
 vi env-dev
-Add the following to the file
 ```
+
+Add the following to the file
 
 ```
 export VAULT_ADDR=https://vault-iit-dev.apps.silver.devops.gov.bc.ca/
@@ -58,6 +59,9 @@ export MOUNT_POINT=path of key value v2 secrets engine
 run the following commands in the terminal
 
 ```
+#create environment variables from the contents of the file env-dev
 source env-dev
+
+#run the script
 python3 py-keepass-vault.py
 ```
