@@ -42,7 +42,7 @@ export KEEPASS_PWD=pwd
 export MOUNT_POINT=path of key value v2 secrets engine
 ```
 
-run
+# Exectution #
 
 ```
 source env-dev
