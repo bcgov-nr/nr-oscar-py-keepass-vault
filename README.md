@@ -1,5 +1,7 @@
 # Create a file to store environment variables #
 
+# Uses pykeepass and hvac libraries #
+
 ```
 touch env-dev
 vi env-dev
