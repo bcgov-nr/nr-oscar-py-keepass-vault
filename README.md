@@ -13,16 +13,25 @@ wsl/linux
 run the following commands in the terminal
 
 ```
-# updating the repo
+#update repo
 sudo apt update
 
+#install python3
 sudo apt install python3
+
+#install python package manager pip
 sudo apt install python3-pip
 
+#install python library to read KeePass database
 pip install pykeepass
+
+#install python vault api client
 pip install hvac
+
+#install json processor to obtain vaul token
 sudo apt install jq
 
+#install vault 
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 sudo apt-get update && sudo apt-get install vault
