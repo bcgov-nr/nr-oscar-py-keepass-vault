@@ -1,7 +1,10 @@
 # Setting things up #
 
-# Pre-requisite #
+# Pre-requisites #
+
+```
 wsl/linux
+```
 
 # Install python, pip, dependencies and vault #
 
