@@ -1,12 +1,10 @@
 # Setting things up #
 
-
 # Pre-requisites #
 
 ```
 wsl/linux
 ```
-
 
 # Install python, pip, dependencies and vault #
 
@@ -27,7 +25,6 @@ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(l
 sudo apt-get update && sudo apt-get install vault
 ```
 
-
 # Create a file to store environment variables #
 
 ```
@@ -43,7 +40,6 @@ export KEEPASS_PATH=path
 export KEEPASS_PWD=pwd
 export MOUNT_POINT=path of key value v2 secrets engine
 ```
-
 
 # Execution #
 
