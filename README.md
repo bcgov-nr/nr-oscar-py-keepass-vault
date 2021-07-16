@@ -5,7 +5,9 @@
 # Pre-requisites #
 
 ```
+#wsl: windows subsystem for linux
 wsl/linux
+installation: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 ```
 
 # Install python, pip, dependencies and vault #
