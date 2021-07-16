@@ -1,5 +1,8 @@
 # Setting things up #
 
+# Pre-requisite #
+wsl/linux
+
 # Install python, pip, dependencies and vault #
 
 ```
