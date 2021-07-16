@@ -13,6 +13,7 @@ wsl/linux
 run the following commands in the terminal
 
 ```
+# updating the repo
 sudo apt update
 
 sudo apt install python3
