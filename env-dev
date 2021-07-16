@@ -1,5 +1,5 @@
 export VAULT_ADDR=https://vault-iit-dev.apps.silver.devops.gov.bc.ca/
 export VAULT_TOKEN=$(vault login -method=oidc -format json | jq -r '.auth.client_token')
-export KEEPASS_PATH=/mnt/c/Users/SANJBABU/WorkFiles/git/py-keepass/temp.kdbx
-export KEEPASS_PWD='pwd'
+export KEEPASS_PATH=sample.kdbx
+export KEEPASS_PWD='12345678'
 export MOUNT_POINT=path
