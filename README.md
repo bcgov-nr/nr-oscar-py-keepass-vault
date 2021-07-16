@@ -10,9 +10,9 @@ wsl/linux
 
 # Install python, pip, dependencies and vault #
 
-```
-run
+run the following commands in the terminal
 
+```
 sudo apt update
 
 sudo apt install python3
@@ -45,8 +45,9 @@ export MOUNT_POINT=path of key value v2 secrets engine
 
 # Execution #
 
+run the following commands in the terminal
+
 ```
-run
 
 source env-dev
 
