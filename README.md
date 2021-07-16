@@ -1,3 +1,18 @@
+# Setting things up #
+
+# Install python #
+
+```
+run
+sudo apt install python3
+pip install pykeepass
+pip install hvac
+```
+
+
+
+
+
 # Create a file to store environment variables #
 
 Uses pykeepass and hvac libraries
