@@ -28,7 +28,7 @@ pip install pykeepass
 #install python vault api client
 pip install hvac
 
-#install json processor to obtain vaul token
+#install json processor to process json response received from vault login with oidc and obtain vaul token
 sudo apt install jq
 
 #install vault 
