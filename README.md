@@ -45,6 +45,8 @@ export MOUNT_POINT=path of key value v2 secrets engine
 # Execution #
 
 ```
+run
+
 source env-dev
 
 python3 py-keepass-vault.py
