@@ -1,10 +1,12 @@
 # Setting things up #
 
+
 # Pre-requisites #
 
 ```
 wsl/linux
 ```
+
 
 # Install python, pip, dependencies and vault #
 
@@ -41,6 +43,7 @@ export KEEPASS_PATH=path
 export KEEPASS_PWD=pwd
 export MOUNT_POINT=path of key value v2 secrets engine
 ```
+
 
 # Execution #
 
