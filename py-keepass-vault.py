@@ -6,7 +6,7 @@ import os
 kp = PyKeePass(os.environ['KEEPASS_PATH'], password=os.environ['KEEPASS_PWD'])
 
 # read KeePass entries
-fullList=kp.entries
+fullList = kp.entries
 
 # loading vault url and token
 client = hvac.Client(url=os.environ['VAULT_ADDR'])
