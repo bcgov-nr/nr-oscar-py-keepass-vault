@@ -47,7 +47,6 @@ sudo apt-get update && sudo apt-get install vault
 
 # 3. Replace environment variables in env-dev with appropriate values #
 
-Add the following to the file
 
 ```
 export VAULT_ADDR=https://vault-iit-dev.apps.silver.devops.gov.bc.ca/
