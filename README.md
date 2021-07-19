@@ -6,12 +6,19 @@
 
 ```
 #wsl: windows subsystem for linux
-wsl/linux
+Windows Subsystem for Linux is a compatibility layer for running Linux binary executables natively on Windows 10
+
 installation: https://docs.microsoft.com/en-us/windows/wsl/install-win10
+Follow manual installation steps 1-6
+Choose Ubuntu 20.04 LTS on step 6
+Install Windows Terminal
+Set your distribution version to WSL 2 (run on cmd "wsl --set-default-version 2")
+
 ```
 
 # Install python, pip, dependencies and vault #
 
+open windows terminal and choose ubuntu-20.04 
 run the following commands in the terminal
 
 ```
@@ -51,9 +58,9 @@ Add the following to the file
 ```
 export VAULT_ADDR=https://vault-iit-dev.apps.silver.devops.gov.bc.ca/
 export VAULT_TOKEN=$(vault login -method=oidc -format json | jq -r '.auth.client_token')
-export KEEPASS_PATH=path
-export KEEPASS_PWD=pwd
-export MOUNT_POINT=path of key value v2 secrets engine
+export KEEPASS_PATH=<path>
+export KEEPASS_PWD=<pwd>
+export MOUNT_POINT=<path of key value v2 secrets engine>
 ```
 
 # Execution #
