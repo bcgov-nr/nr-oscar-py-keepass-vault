@@ -2,7 +2,7 @@
 
 # Setting things up #
 
-# Pre-requisites #
+# Pre-requisites: #
 
 ```
 #WSL: Windows Subsystem for Linux
