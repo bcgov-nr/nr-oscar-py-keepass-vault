@@ -8,11 +8,11 @@
 #wsl: windows subsystem for linux
 Windows Subsystem for Linux is a compatibility layer for running Linux binary executables natively on Windows 10
 
-installation: https://docs.microsoft.com/en-us/windows/wsl/install-win10
-Follow manual installation steps 1-6
-Choose Ubuntu 20.04 LTS on step 6
-Install Windows Terminal
-Set your distribution version to WSL 2 (run on cmd "wsl --set-default-version 2")
+1. installation: https://docs.microsoft.com/en-us/windows/wsl/install-win10
+2. Follow manual installation steps 1-6
+3. Choose Ubuntu 20.04 LTS on step 6
+4. Install Windows Terminal
+5. run on cmd "wsl --set-default-version 2" (Set your distribution version to WSL 2)
 
 ```
 
