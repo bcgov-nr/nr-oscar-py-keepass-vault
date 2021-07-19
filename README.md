@@ -18,7 +18,7 @@ Windows Subsystem for Linux is a compatibility layer for running Linux binary ex
 
 # Install python, pip, dependencies and vault #
 
-Open Windows terminal and choose Ubuntu-20.04 and run the following commands in the terminal
+Open Windows terminal and choose Ubuntu-20.04 and run the following commands
 
 ```
 1. #Update repo
