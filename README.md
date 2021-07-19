@@ -58,7 +58,7 @@ export MOUNT_POINT=<path of key value v2 secrets engine>
 
 # 4. Execution #
 
-run the following commands in the terminal
+Run the following commands in the terminal
 
 ```
 #create environment variables from the contents of the file env-dev
