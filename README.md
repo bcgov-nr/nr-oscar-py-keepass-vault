@@ -45,12 +45,7 @@ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(l
 sudo apt-get update && sudo apt-get install vault
 ```
 
-# 3. Create a file to store environment variables #
-
-```
-touch env-dev
-vi env-dev
-```
+# 3. Replace environment variables in env-dev with appropriate values #
 
 Add the following to the file
 
