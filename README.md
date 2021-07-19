@@ -1,4 +1,4 @@
-# A python script that utilizes hvac and pykeepass libs and vault apis to reads credentials from KeePass and push it to vault #
+# A python script that utilizes hvac and pykeepass libs and vault apis to read credentials from KeePass and push it to vault #
 
 # Setting things up #
 
