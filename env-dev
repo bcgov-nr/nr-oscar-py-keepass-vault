@@ -2,4 +2,5 @@ export VAULT_ADDR=https://vault-iit-dev.apps.silver.devops.gov.bc.ca/
 export VAULT_TOKEN=$(vault login -method=oidc -format json | jq -r '.auth.client_token')
 export KEEPASS_PATH=sample.kdbx
 export KEEPASS_PWD='12345678'
-export MOUNT_POINT=path
+export MOUNT_POINT=user
+export SECRETS_PATH=<your_email>/test-load

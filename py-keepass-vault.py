@@ -15,4 +15,4 @@ client.token = os.environ['VAULT_TOKEN']
 # pushing KeePass entries to vault
 # create a new v2 secrets engine using vault ui and set it as mount point
 for entry in fullList:
-    create_response = client.secrets.kv.v2.create_or_update_secret(mount_point=os.environ['MOUNT_POINT'], path=entry.title, secret=dict(title=entry.title, username=entry.username, password=entry.password, notes=entry.notes))
+    create_response = client.secrets.kv.v2.create_or_update_secret(mount_point=os.environ['MOUNT_POINT'], path=os.environ['SECRETS_PATH']+'/'+entry.title, secret=dict(title=entry.title, username=entry.username, password=entry.password, notes=entry.notes))
