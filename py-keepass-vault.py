@@ -1,6 +1,7 @@
 from pykeepass import PyKeePass
 import hvac
 import os
+import sys
 
 # load database
 kp = PyKeePass(os.environ['KEEPASS_PATH'], password=os.environ['KEEPASS_PWD'])
@@ -15,4 +16,8 @@ client.token = os.environ['VAULT_TOKEN']
 # pushing KeePass entries to vault
 # create a new v2 secrets engine using vault ui and set it as mount point
 for entry in fullList:
-    create_response = client.secrets.kv.v2.create_or_update_secret(mount_point=os.environ['MOUNT_POINT'], path=os.environ['SECRETS_PATH']+'/'+entry.title, secret=dict(title=entry.title, username=entry.username, password=entry.password, notes=entry.notes))
+    try:
+        create_response = client.secrets.kv.v2.create_or_update_secret(mount_point=os.environ['MOUNT_POINT'], path=os.environ['SECRETS_PATH']+'/'+entry.title, secret=dict(title=entry.title, username=entry.username, password=entry.password, notes=entry.notes))
+    except Exception as error:
+        sys.stdout.write(error.args)
+        sys.stdout.flush()
