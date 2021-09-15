@@ -1,6 +1,6 @@
 VAULT_ADDR=https://vault-iit-dev.apps.silver.devops.gov.bc.ca/
-VAULT_TOKEN=s.m34fKZwTcEHfOg5rX3YDQWBv
-KEEPASS_PATH=sample.kdbx
-KEEPASS_PWD=12345678
+VAULT_TOKEN=
+KEEPASS_PATH=
+KEEPASS_PWD=
 MOUNT_POINT=user
-SECRETS_PATH=sanjay.babu@gov.bc.ca/test-load11
+SECRETS_PATH=your_email/path

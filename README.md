@@ -23,10 +23,9 @@ Windows Subsystem for Linux is a compatibility layer for running Linux binary ex
 ```
 VAULT_ADDR=https://vault-iit-dev.apps.silver.devops.gov.bc.ca/
 VAULT_TOKEN=
-KEEPASS_PATH=<path>
+KEEPASS_PATH=<keepass_file.kdbx>
 KEEPASS_PWD=<pwd>
-MOUNT_POINT=<path of key value v2 secrets engine>
-SECRETS_PATH=<path to secrets>
+SECRETS_PATH=your_email/new_path
 
 ```
 
@@ -37,11 +36,12 @@ SECRETS_PATH=<path to secrets>
 Run the following commands in the terminal:
 
 ```
-#create environment variables from the contents of the file env-dev
-source env-dev
+#build the image
+docker build -t "appdev:py-keepass-vault" .
+
 
 #run the script
-docker run --rm --name container1 --env-file env-dev -v "$(pwd):/home" appdev:test bash -c "python3 py-keepass-vault.py"
+docker run --rm --name vaultloader --env-file env-dev -v "$(pwd):/home" appdev:py-keepass-vault bash -c "python3 py-keepass-vault.py"
 
 #list the data you loaded
 vault kv list -format yaml user/andreas.wilson@gov.bc.ca/test-load
