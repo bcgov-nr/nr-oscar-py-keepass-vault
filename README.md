@@ -15,7 +15,7 @@ Windows Subsystem for Linux is a compatibility layer for running Linux binary ex
 5. Run on cmd "wsl --set-default-version 2" (Set your distribution version to WSL 2)
 
 ```
-## 3. Replace environment variables in env-dev with appropriate values ##
+## 3. Replace environment variables in env-dev file with appropriate values ##
 
 ## Obtain vault token from UI by going to https://vault-iit-dev.apps.silver.devops.gov.bc.ca/ and click on profile icon on the top right hand corner and Copy token
 ## Sample KeePass file password: 12345678
