@@ -5,16 +5,11 @@
 ## 1. Pre-requisites: ##
 
 ```
-#WSL: Windows Subsystem for Linux
-Windows Subsystem for Linux is a compatibility layer for running Linux binary executables natively on Windows 10
-
-1. Installation: https://docs.microsoft.com/en-us/windows/wsl/install-win10
-2. Follow manual installation steps 1-6
-3. Choose Ubuntu 20.04 LTS on step 6
-4. Install Windows Terminal
-5. Run on cmd "wsl --set-default-version 2" (Set your distribution version to WSL 2)
+#Docker
 
 ```
+## 2. Clone the repo and copy the KeePass file into the repo
+
 ## 3. Replace environment variables in env-dev file with appropriate values ##
 
 ## Obtain vault token from UI by going to https://vault-iit-dev.apps.silver.devops.gov.bc.ca/ and click on profile icon on the top right hand corner and Copy token
