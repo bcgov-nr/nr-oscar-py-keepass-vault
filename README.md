@@ -39,7 +39,6 @@ Run the following commands in the terminal:
 #build the image
 docker build -t "appdev:py-keepass-vault" .
 
-
 #run the script
 docker run --rm --name vaultloader --env-file env-dev -v "$(pwd):/home" appdev:py-keepass-vault bash -c "python3 py-keepass-vault.py"
 
