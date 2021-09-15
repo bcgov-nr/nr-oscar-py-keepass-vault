@@ -12,8 +12,8 @@
 
 ## 3. Replace the following environment variables in env-dev file with appropriate values ##
 
-# Obtain vault token from UI by going to https://vault-iit-dev.apps.silver.devops.gov.bc.ca/ and click on profile icon on the top right hand corner and Copy token
-# Sample KeePass file password: 12345678
+### Obtain vault token from UI by going to https://vault-iit-dev.apps.silver.devops.gov.bc.ca/ and click on profile icon on the top right hand corner and Copy token
+### Sample KeePass file password: 12345678
 
 ```
 VAULT_ADDR=https://vault-iit-dev.apps.silver.devops.gov.bc.ca/
