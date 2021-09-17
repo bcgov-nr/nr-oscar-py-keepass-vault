@@ -1,0 +1,6 @@
+VAULT_ADDR=https://vault-iit-dev.apps.silver.devops.gov.bc.ca/
+VAULT_TOKEN=<<your_token>>
+KEEPASS_PATH=sample.kdbx
+MOUNT_POINT=user
+SECRETS_PATH=email/target_path
+KEEPASS_PWD=<<keepass_password>>

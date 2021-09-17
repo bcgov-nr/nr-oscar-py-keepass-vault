@@ -1,6 +1,0 @@
-VAULT_ADDR=https://vault-iit-dev.apps.silver.devops.gov.bc.ca/
-VAULT_TOKEN=
-KEEPASS_PATH=
-KEEPASS_PWD=
-MOUNT_POINT=user
-SECRETS_PATH=<your_email>/test_load
