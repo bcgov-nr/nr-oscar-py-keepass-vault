@@ -3,4 +3,4 @@ VAULT_TOKEN=
 KEEPASS_PATH=
 KEEPASS_PWD=
 MOUNT_POINT=user
-SECRETS_PATH=your_email/path
+SECRETS_PATH=<your_email>/test_load
