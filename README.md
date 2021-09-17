@@ -5,7 +5,8 @@
 ## 1. Pre-requisites: ##
 
 ```
-#Docker
+#git: https://git-scm.com/downloads
+#Docker: https://www.docker.com/products/docker-desktop
 
 ```
 ## 2. Clone the repo and copy the KeePass file into the repo
