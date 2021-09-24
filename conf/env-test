@@ -1,0 +1,6 @@
+VAULT_ADDR=https://vault-iit-test.apps.silver.devops.gov.bc.ca/
+VAULT_TOKEN=<token>
+KEEPASS_PATH=conf/crypto_sample.kdbx
+MOUNT_POINT=user
+SECRETS_PATH=<username>@gov.bc.ca/
+KEEPASS_PWD=
