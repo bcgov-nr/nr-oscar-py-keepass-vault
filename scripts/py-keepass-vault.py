@@ -1,7 +1,6 @@
 from pykeepass import PyKeePass
 import hvac
 import os
-import sys
 
 # reading environment variables
 ENV_KEEPASS_PATH = os.environ['KEEPASS_PATH']
@@ -27,16 +26,18 @@ client.token = ENV_VAULT_TOKEN
 for entry in fullList:
     try:
         create_response = client.secrets.kv.v2.create_or_update_secret(mount_point=ENV_MOUNT_POINT, path=ENV_SECRETS_PATH+'/'+ (str(entry.group).split())[1].split('"')[1]+ '/' +entry.title.replace("/","_"), secret=dict(username=entry.username, password=entry.password))
+        custom_metadata={
+            "keepass-title": entry.title,
+            "keepass-file": kfile,
+            "keepass-uuid": entry.uuid.hex,
+            "keepass-url": entry.url if entry.url else None,
+            "keepass-notes": entry.notes if entry.notes else None
+        }
+        custom_metadata = {key: value for key, value in custom_metadata.items() if value is not None}
+
         client.secrets.kv.v2.update_metadata(
             path=ENV_SECRETS_PATH+'/'+ (str(entry.group).split())[1].split('"')[1] + '/' +entry.title.replace("/","_"),
-            cas_required=True,
-            custom_metadata={
-                "keepass-title": entry.title,
-                "keepass-file": kfile,
-                "keepass-uuid": str(entry.uuid),
-                "keepass-url": entry.url,
-                "keepass-notes": entry.notes
-            }
+            custom_metadata=custom_metadata
         )
         print((str(entry.group).split())[1].split('"')[1])
     except Exception as error:
