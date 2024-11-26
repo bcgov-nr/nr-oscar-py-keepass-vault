@@ -1,2 +1,2 @@
 #!/bin/bash
-vault kv list -format yaml user/$SECRETS_PATH
+vault kv list -format json secret/$SECRETS_PATH
