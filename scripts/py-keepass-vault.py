@@ -27,11 +27,11 @@ for entry in fullList:
     try:
         create_response = client.secrets.kv.v2.create_or_update_secret(mount_point=ENV_MOUNT_POINT, path=ENV_SECRETS_PATH+'/'+ (str(entry.group).split())[1].split('"')[1]+ '/' +entry.title.replace("/","_"), secret=dict(username=entry.username, password=entry.password))
         custom_metadata={
-            "keepass-title": entry.title,
-            "keepass-file": kfile,
-            "keepass-uuid": entry.uuid.hex,
-            "keepass-url": entry.url if entry.url else None,
-            "keepass-notes": entry.notes if entry.notes else None
+            "keepass_title": entry.title,
+            "keepass_filename": kfile,
+            "keepass_uuid": entry.uuid.hex,
+            "keepass_url": entry.url if entry.url else None,
+            "keepass_notes": entry.notes if entry.notes else None
         }
         custom_metadata = {key: value for key, value in custom_metadata.items() if value is not None}
 
