@@ -28,13 +28,14 @@ for entry in fullList:
     try:
         coerced_entry_group = ('' if entry.group.is_root_group else '/'+str(entry.group).split('"')[1])
         entry_path = ENV_SECRETS_PATH+coerced_entry_group+'/'+entry.title.replace("/","_")+'-'+entry.uuid.hex
-        print(entry_path)
+        print("Creating" + entry_path)
 
         create_response = client.secrets.kv.v2.create_or_update_secret(
                 mount_point=ENV_MOUNT_POINT,
                 path=entry_path,
                 secret=dict(username=entry.username, password=entry.password))
 
+        print("Updating metadata.")
         custom_metadata={
             "keepass_title": entry.title,
             "keepass_filename": kfile,
@@ -45,10 +46,12 @@ for entry in fullList:
         custom_metadata = {key: value for key, value in custom_metadata.items() if value is not None}
 
         client.secrets.kv.v2.update_metadata(
+            mount_point=ENV_MOUNT_POINT,
             path=entry_path,
             custom_metadata=custom_metadata
         ) 
 
+        print("Writing URL to KeePass file.")
         vault_url = ENV_VAULT_ADDR+"/ui/vault/secrets/"+ENV_MOUNT_POINT+"/kv/"+urllib.parse.quote(entry_path, safe='')+"/details"
         entry.notes = "Vault URL: "+vault_url+"\n\n"+(entry.notes if entry.notes else '')
 
