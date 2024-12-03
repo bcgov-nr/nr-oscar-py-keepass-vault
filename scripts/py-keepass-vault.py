@@ -28,7 +28,7 @@ for entry in fullList:
     try:
         coerced_entry_group = ('' if entry.group.is_root_group else '/'+str(entry.group).split('"')[1])
         entry_path = ENV_SECRETS_PATH+coerced_entry_group+'/'+entry.title.replace("/","_")+'-'+entry.uuid.hex
-        print("Creating" + entry_path)
+        print("Creating " + entry_path)
 
         create_response = client.secrets.kv.v2.create_or_update_secret(
                 mount_point=ENV_MOUNT_POINT,
@@ -41,7 +41,6 @@ for entry in fullList:
             "keepass_filename": kfile,
             "keepass_uuid": entry.uuid.hex,
             "keepass_url": entry.url if entry.url else None,
-            "keepass_expiry": str(entry.expiry_time) if entry.expires else None,
         }
         custom_metadata = {key: value for key, value in custom_metadata.items() if value is not None}
 
