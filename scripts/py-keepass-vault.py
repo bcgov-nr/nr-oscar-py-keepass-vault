@@ -29,11 +29,11 @@ for entry in fullList:
         coerced_entry_group = ('' if entry.group.is_root_group else '/'+str(entry.group).split('"')[1])
         entry_path = ENV_SECRETS_PATH+coerced_entry_group+'/'+entry.title.replace("/","_")+'-'+entry.uuid.hex
 
-        if entry.notes and entry.notes.lower().find('moved to vault') > 0:
+        if entry.notes and entry.notes.lower().find('moved to vault') >= 0:
             print("Skipping, previously moved to vault: " + entry_path)
             continue
 
-        print("Creating " + entry_path)
+        print("Notes: " + (entry.notes if entry.notes else "NO NOTES"))
 
         create_response = client.secrets.kv.v2.create_or_update_secret(
                 mount_point=ENV_MOUNT_POINT,
