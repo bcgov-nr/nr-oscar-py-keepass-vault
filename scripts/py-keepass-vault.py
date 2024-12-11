@@ -33,7 +33,7 @@ for entry in fullList:
             print("Skipping, previously moved to vault: " + entry_path)
             continue
 
-        print("Notes: " + (entry.notes if entry.notes else "NO NOTES"))
+        print("Creating: " + entry_path)
 
         create_response = client.secrets.kv.v2.create_or_update_secret(
                 mount_point=ENV_MOUNT_POINT,
